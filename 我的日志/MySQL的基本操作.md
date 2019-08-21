@@ -169,4 +169,7 @@ mysql> drop database test;
 
 
 
-上月第一天 SELECT date_sub(date_sub(date_format(now(),'%y-%m-%d '),interval extract( day from now())-1 day),interval 1 month) 本月第一天 select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract(  day from now())-1 day),interval 0 month) 本周周五的日期 SELECT SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')-5); 上周周三的日期 SELECT SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')+3); 
+上月第一天 SELECT date_sub(date_sub(date_format(now(),'%y-%m-%d '),interval extract( day from now())-1 day),interval 1 month) 
+本月第一天 select date_sub(date_sub(date_format(now(),'%y-%m-%d'),interval extract(  day from now())-1 day),interval 0 month) 
+本周周五的日期 SELECT SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')-5); 
+上周周三的日期 SELECT SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')+3); 
