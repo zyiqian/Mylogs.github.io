@@ -121,7 +121,7 @@ NULL说明：
 
 select 字段名 from 表名 order by 字段名 asc/desc,字段名 asc/desc 
 	 按多列排序:
-	        入职时间相同的人薪水不同
+	        入职时间相同的人薪水不同，
 		    SELECT * FROM employee5 
 			    ORDER BY hire_date DESC,
 			    salary ASC;
