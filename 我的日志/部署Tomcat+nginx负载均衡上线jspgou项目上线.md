@@ -92,4 +92,50 @@ jdbc.password=1    (数据库密码)
 ##### ！！！！注意！！！！
 
 jdk环境为1.7的
+Tomcat多实例配置
+
+多虚拟主机：nginx 多个Server标签（域名，ip，端口） 进程数量固定 master+worker
+
+多实例（多进程）：同一个程序启动多次，分为两种情况:
+
+第一种：一台机器跑多个站点； 
+
+第二种：一个机器跑一个站点多个实例，配合负载均衡
+
+    1、复制程序文件
+    [root@hackerlion ~]# cp -a /usr/local/tomcat /usr/local/tomcat1  -a 是保持跟原目录一样包括权限
+    [root@hackerlion ~]# cp -a /usr/local/tomcat /usr/local/tomcat2
+    
+    2、修改端口，以启动多实例。多实例之间端口不能一致
+    sed -i 's#8005#8011#;s#8080#8081#' /usr/local/tomcat1/conf/server.xml
+    sed -i 's#8005#8012#;s#8080#8082#' /usr/local/tomcat2/conf/server.xml
+    比较
+    diff /usr/local/tomcat1/conf/server.xml /usr/local/tomcat2/conf/server.xml
+    3、修改环境变量 改为局部变量，修改catalina.sh 
+    
+    [root@hackerlion ~]# vim /usr/local/tomcat2/bin/catalina.sh 
+    CATALINA_HOME=/usr/local/tomcat2
+    [root@hackerlion ~]# vim /usr/local/tomcat1/bin/catalina.sh 
+    CATALINA_HOME=/usr/local/tomcat1
+    
+    4、配置nginx负载均衡
+    [root@hackerlion ~]# vim /etc/nginx/nginx.conf
+    upstream lion {
+        server 192.168.78.123:8080;
+        server 192.168.78.123:8081;
+        server 192.168.78.123:8082;
+    }
+    location / {
+        server_name 192.168.78.123;
+        root html;
+        index index.html;
+        proxy_pass http://lion;
+    }
+    
+    启动Tomcat
+    [root@hackerlion ~]# /usr/local/tomcat/bin/startup.sh
+    [root@hackerlion ~]# /usr/local/tomcat1/bin/startup.sh
+    [root@hackerlion ~]# /usr/local/tomcat2/bin/startup.sh
+
+
 
