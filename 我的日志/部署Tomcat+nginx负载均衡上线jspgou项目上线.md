@@ -18,22 +18,22 @@ http://tomcat.apache.org //tomcat官网
 [root@localhost ~]# cd /usr/local/src/
 [root@localhost ~]# tar xf apache-tomcat-7.0.85.tar.gz -C /usr/local/ 
 [root@localhost ~]# tar xf jdk-7u67-linux-x64.tar.gz -C /usr/local 
-[root@localhost ~]# mv jdk1.7.0_67/ java 
-[root@localhost ~]# mv apache-tomcat-7.0.82/ tomcat
+[root@localhost ~]# mv jdk1.7.0_67/ java_7 
+[root@localhost ~]# mv apache-tomcat-7.0.82/ tomcat_7
 配置java环境变量
-[root@youngfit ~]# vim /etc/profile
+[root@youngfit ~]# vim /etc/profile.d/java_7.sh
 添加
-export JAVA_HOME=/usr/local/java 
+export JAVA_HOME=/usr/local/java_7 
 export PATH=$JAVA_HOME/bin:$PATH 
-export CATALINA_HOME=/usr/local/tomcat
+export CATALINA_HOME=/usr/local/tomcat_7
 配置好后检测一下
-[root@youngfit ~]# source /etc/profile 
+[root@youngfit ~]# source /etc/profile.d/java_7.sh 
 [root@youngfit ~]# java -version 
 java version "1.7.0_67" Java(TM) SE Runtime Environment (build 1.7.0_67-b01)
 Java HotSpot(TM) 64-Bit Server VM (build 24.65-b04, mixed mode) 
 启动Tomcat
-[root@youngfit ~]# /usr/local/tomcat/bin/startup.sh 
-[root@youngfit ~]# /usr/local/tomcat/bin/shutdown.sh（停止）
+[root@youngfit ~]# /usr/local/tomcat_7/bin/startup.sh 
+[root@youngfit ~]# /usr/local/tomcat_7/bin/shutdown.sh（停止）
 .检查是否启动成功 
 [root@youngfit ~]# netstat -tnlp | grep java tcp 0 0 ::ffff:127.0.0.1:8005 :::* LISTEN 6191/java tcp 0 0 :::8009 :::* LISTEN 6191/java tcp 0 0 :::8080 :::* LISTEN 6191/java
 去网站测试
@@ -42,12 +42,22 @@ http://192.168.87.66:8080
 ```
 
 ##### 数据库导入
+由于本次使用的是mysql数据库
+项目中使用的是mariadb 所以时间格式有所冲突
+则需要去修改jspgou.db中的时间格式
 
 ```
-1、使用mysql
+1、修改时间格式
+把原来的0000-00-00格式替换成2008-01-01
+[root@youngfit ~]# vim /usr/loacal/src/DB/jspgou.sql
+
+/% s/0000-00-00/2008-01-01/
+
+2、使用mysql
 [root@youngfit ~]# mysql -uroot -p 
 create database jspgou default charset=utf8;    //在数据库中操作，创建数据库并指定字符集 
 flush privileges;
+[root@youngfit ~]# mysql -u root -p -D jspgou < /usr/loacal/src/DB/jspgou.sql //导入数据
 ```
 
 ##### 部署jspgou项目
@@ -58,29 +68,24 @@ flush privileges;
 [root@youngfit ~]# cd /usr/local/src
 [root@youngfit src]# unzip +包名 
 先把Tomcat的原网站目录加个后缀备份掉，或者删掉
-[root@youngfit ~]# mv /usr/local/tomcat/webapps/ROOT  /usr/local/tomcat/webapps/ROOT_bak
-[root@youngfit ~]# cp -r /usr/local/src/ROOT/ /usr/local/tomcat/webapps/
+[root@youngfit ~]# mv /usr/local/tomcat_7/webapps/ROOT  /usr/local/tomcat_7/webapps/ROOT_bak
+[root@youngfit ~]# cp -r /usr/local/src/ROOT/ /usr/local/tomcat_7/webapps/
 ```
 
 ##### 更新数据库链接
 
 ```
-[root@youngfit ~]# vim /usr/local/tomcat/webapps/ROOT/WEB-INF/config/jdbc.properties
+[root@youngfit ~]# vim /usr/local/tomcat_7/webapps/ROOT/WEB-INF/config/jdbc.properties
 jdbc.url=jdbc:mysql://127.0.0.1:3306/(创建好的数据库名)?characterEncoding=UTF-8 
 jdbc.username=root  （数据库用户）
 jdbc.password=1    (数据库密码)
 ```
 
-##### 导入数据库
-
-```
-[root@youngfit ~]# mysql -u root -p -D jspgou < /usr/loacal/src/DB/jspgou.sql
-```
 
 ##### 再次启动Tomcat服务
 
 ```
-[root@youngfit ~]#/usr/local/tomcat/bin/startup.sh
+[root@youngfit ~]#/usr/local/tomcat_7/bin/startup.sh
 ```
 
 ##### 测试
@@ -103,20 +108,20 @@ Tomcat多实例配置
 第二种：一个机器跑一个站点多个实例，配合负载均衡
 
     1、复制程序文件
-    [root@hackerlion ~]# cp -a /usr/local/tomcat /usr/local/tomcat1  -a 是保持跟原目录一样包括权限
-    [root@hackerlion ~]# cp -a /usr/local/tomcat /usr/local/tomcat2
+    [root@hackerlion ~]# cp -a /usr/local/tomcat_7 /usr/local/tomcat_7_1  -a 是保持跟原目录一样包括权限
+    [root@hackerlion ~]# cp -a /usr/local/tomcat_7 /usr/local/tomcat_7_2
     
     2、修改端口，以启动多实例。多实例之间端口不能一致
-    sed -i 's#8005#8011#;s#8080#8081#' /usr/local/tomcat1/conf/server.xml
-    sed -i 's#8005#8012#;s#8080#8082#' /usr/local/tomcat2/conf/server.xml
+    sed -i 's#8005#8011#;s#8080#8081#' /usr/local/tomcat_7_1/conf/server.xml
+    sed -i 's#8005#8012#;s#8080#8082#' /usr/local/tomcat_7_2/conf/server.xml
     比较
-    diff /usr/local/tomcat1/conf/server.xml /usr/local/tomcat2/conf/server.xml
+    diff /usr/local/tomcat_7_1/conf/server.xml /usr/local/tomcat_7_2/conf/server.xml
     3、修改环境变量 改为局部变量，修改catalina.sh 
     
-    [root@hackerlion ~]# vim /usr/local/tomcat2/bin/catalina.sh 
-    CATALINA_HOME=/usr/local/tomcat2
-    [root@hackerlion ~]# vim /usr/local/tomcat1/bin/catalina.sh 
-    CATALINA_HOME=/usr/local/tomcat1
+    [root@hackerlion ~]# vim /usr/local/tomcat_7_2/bin/catalina.sh 
+    CATALINA_HOME=/usr/local/tomcat_7_2
+    [root@hackerlion ~]# vim /usr/local/tomcat_7_1/bin/catalina.sh 
+    CATALINA_HOME=/usr/local/tomcat_7_1
     
     4、配置nginx负载均衡
     [root@hackerlion ~]# vim /etc/nginx/nginx.conf
@@ -133,9 +138,9 @@ Tomcat多实例配置
     }
     
     启动Tomcat
-    [root@hackerlion ~]# /usr/local/tomcat/bin/startup.sh
-    [root@hackerlion ~]# /usr/local/tomcat1/bin/startup.sh
-    [root@hackerlion ~]# /usr/local/tomcat2/bin/startup.sh
+    [root@hackerlion ~]# /usr/local/tomcat_7/bin/startup.sh
+    [root@hackerlion ~]# /usr/local/tomcat_7_1/bin/startup.sh
+    [root@hackerlion ~]# /usr/local/tomcat_7_2/bin/startup.sh
 
 
 
