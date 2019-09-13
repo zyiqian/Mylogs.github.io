@@ -160,8 +160,11 @@ http {
   server {
    server_name 192.168.78.123;               //vip
    location /web1 {
-    proxy_pass http://192.168.78.11:8080/;
+    proxy_pass http://192.168.78.11:8080/;    //多一个"/" 就是直接访问ROOT目录下的index.html
   }
+ #  location /web1 {
+ #   proxy_pass http://192.168.78.11:8080;    //如果没有"/" 就是访问ROOT/web1/index.html
+ # }
      location /web2 {
         proxy_pass http://192.168.78.11:8081/;
      }
