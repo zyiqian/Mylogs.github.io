@@ -98,6 +98,8 @@ jdbc.password=1    (数据库密码)
 
 jdk环境为1.7的
 Tomcat多实例配置
+tomcat版本为7.x
+启动Tomcat之前记得关闭防火墙，或者设置开放需要用到的端口
 
 多虚拟主机：nginx 多个Server标签（域名，ip，端口） 进程数量固定 master+worker
 
@@ -130,13 +132,14 @@ Tomcat多实例配置
         server 192.168.78.123:8081;
         server 192.168.78.123:8082;
     }
-    location / {
-        server_name 192.168.78.123;
-        root html;
-        index index.html;
-        proxy_pass http://lion;
+    server {
+      server_name 192.168.78.123;
+         location / {
+           root html;
+           index index.html;
+           proxy_pass http://lion;
     }
-    
+  }  
     启动Tomcat
     [root@hackerlion ~]# /usr/local/tomcat_7/bin/startup.sh
     [root@hackerlion ~]# /usr/local/tomcat_7_1/bin/startup.sh
