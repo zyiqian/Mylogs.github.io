@@ -42,7 +42,7 @@ tar -zxf git-2.0.0.tar.gz
 cd git-2.0.0
 make configure
 ./configure --prefix=/usr
-make  
+make     (2.23.0版本可以直接make编译)
 make install  
 ```
 
