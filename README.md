@@ -40,6 +40,8 @@
 2019-9-21
 
 今天使用前天的文档安装了编译安装了Git,安装的是Git最新版2.23.0,发现安装不用makefile编译，可以直接make && make install
+
 更新修改 My_Los-->  Git及GitHub的使用.md
+
 更新修改 My_Los-->  Gitlab+Jenkins的部署
  
