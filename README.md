@@ -36,3 +36,7 @@
 今天主要是学习了下gitlab和Jenkins的使用
 
 -----Gitlab+Jenkins的部署------
+
+2019-9-21
+
+
