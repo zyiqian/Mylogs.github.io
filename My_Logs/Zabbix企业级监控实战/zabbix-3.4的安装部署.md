@@ -59,6 +59,17 @@ repolist: 20,796
 这里我们直接用yum 装
 
 ```
+如果原来机器上面已经安装有数据库先把原本的删除掉
+[root@mysql_3 ~]# rpm -q mariadb
+mariadb-5.5.64-1.el7.x86_64
+[root@mysql_3 ~]# yum remove mariadb -y  //这样并没有完全删除完，需要手动删除其他依赖文件
+[root@mysql_3 ~]# find / -name mysql
+/var/lib/mysql
+/usr/share/mysql
+......
+[root@mysql_3 ~]# rm -rf /var/lib/mysql  
+
+然后再安装mariadb
 yum install mariadb-server mariadb-client
 
 修改配置
