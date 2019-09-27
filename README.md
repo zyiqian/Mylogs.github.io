@@ -31,6 +31,7 @@
     zabbix    ALL=(ALL)   NOPASSWD: ALL     #添加的一行，表示不需要输入密码
 
 [root@node1 ~]# vim /etc/zabbix/zabbix_agentd.conf
+
     EnableRemoteCommands=1          #允许接收远程命令
     LogRemoteCommands=1             #把接收的远程命令记入日志
 
