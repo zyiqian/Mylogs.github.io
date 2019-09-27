@@ -16,6 +16,26 @@
 ----------------------------------------------------------------------------------
 2019-9-27
 
+由于昨天已经安装部署好zabbix了，所以今天主要是在zabbix GUI 上面做了些相关操作，定义动作，定义报警媒介
+，还有定义一些图形等操作；
+定义动作的时候，我们还需要在虚拟机上进行两项操作：
+
+- 一是修改sudo配置文件使zabbix用户能够临时拥有管理员权限；
+- 二是修改zabbix配置文件使其允许接收远程命令
+
+[root@node1 ~]# visudo          #相当于“vim /etc/sudoers”
+    ## Allow root to run any commands anywhere
+    root    ALL=(ALL)   ALL
+    zabbix    ALL=(ALL)   NOPASSWD: ALL     #添加的一行，表示不需要输入密码
+
+[root@node1 ~]# vim /etc/zabbix/zabbix_agentd.conf
+    EnableRemoteCommands=1          #允许接收远程命令
+    LogRemoteCommands=1             #把接收的远程命令记入日志
+
+[root@node1 ~]# systemctl restart zabbix-agent.service
+
+
+
 
 2019-9-26
 
