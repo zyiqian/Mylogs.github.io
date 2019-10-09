@@ -36,7 +36,7 @@ Python3 的六个标准数据类型中：
 
 今天主要学习了三种不同数值类型**int、 float、complex; 字符串string; 及列表list**
 
-------------[Python_tow day](https://github.com/SmileAgainZ/Mylogs.github.io/blob/master/Python_study/2%E3%80%81Python%20%E7%AC%AC%E4%BA%8C%E3%80%81%E4%B8%89%E5%A4%A9.md)-------------
+------------[Python_tow day](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/2%E3%80%81Python%20%E7%AC%AC%E4%BA%8C%E3%80%81%E4%B8%89%E5%A4%A9.md)-------------
 ---
 ---
 2019-10-8
@@ -45,7 +45,7 @@ Python3 的六个标准数据类型中：
 
 Python 是一个高层次的结合了解释性、编译性、互动性和面向对象的高级程序设计语言
 
---------------[Python_study_one_day](https://github.com/SmileAgainZ/Mylogs.github.io/blob/master/Python_study/Python%E4%BB%8B%E7%BB%8D.md)---------
+--------------[Python_study_one_day](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/Python%E4%BB%8B%E7%BB%8D.md)---------
 
 ---
 2019-10-2
@@ -69,7 +69,7 @@ Python 是一个高层次的结合了解释性、编译性、互动性和面向�
 解答,回一句不回一句那种，超无奈的。今天又对昨天的12306抢票做了linux版本的文档，这也是一时兴起，觉得在Windows
 系统上面跑是要比linux下面耗内存更大些所以特此又做了Linux版的,文档在--MyLog--目录下，有兴趣的小伙伴可以尝试下。
 
--------------------[12306抢票助手linux版](https://github.com/SmileAgainZ/Mylogs.github.io/blob/master/My_Logs/12306%E6%8A%A2%E7%A5%A8%E5%8A%A9%E6%89%8BLinux%E7%89%88.md)------------
+-------------------[12306抢票助手linux版](https://github.com/Shmil-You/Mylogs.github.io/blob/master/My_Logs/12306%E6%8A%A2%E7%A5%A8%E5%8A%A9%E6%89%8BLinux%E7%89%88.md)------------
 
 
 2019-9-29
@@ -81,7 +81,7 @@ Python 是一个高层次的结合了解释性、编译性、互动性和面向�
 这个只是在Windows上操作，唯一觉得不足的就是那个计划任务不会定义，而且python我也是没怎么了解过。但是基本的语法也没多大差异
 只是python的书写格式严格了点
 
------------------[12306抢票助手Windows版](https://github.com/SmileAgainZ/Mylogs.github.io/blob/master/My_Logs/12306%E6%8A%A2%E7%A5%A8%E5%8A%A9%E6%89%8BWindows%E7%89%88.md)-------------------------
+-----------------[12306抢票助手Windows版](https://github.com/Shmil-You/Mylogs.github.io/blob/master/My_Logs/12306%E6%8A%A2%E7%A5%A8%E5%8A%A9%E6%89%8BWindows%E7%89%88.md)-------------------------
 
 
 2019-9-28
