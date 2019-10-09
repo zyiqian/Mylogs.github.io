@@ -35,7 +35,7 @@ Python3 的六个标准数据类型中：
 - 可变数据（3 个）：List（列表）、Dictionary（字典）、Set（集合）
 
 今天主要学习了三种不同数值类型**int、 float、complex; 字符串string; 及列表list**
-
+------------[Python_tow day](https://github.com/SmileAgainZ/Mylogs.github.io/blob/master/Python_study/2%E3%80%81Python%20%E7%AC%AC%E4%BA%8C%E3%80%81%E4%B8%89%E5%A4%A9.md)-------------
 ---
 ---
 2019-10-8
