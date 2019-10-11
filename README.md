@@ -32,7 +32,7 @@
 ```
 函数的调用：函数使用的原则，必须先定义，才可以调用。
 
---------------------------------[3、Python 第四、五天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/)---------------------------
+--------------------------------[3、Python 第四、五天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/3%E3%80%81Python%20%E7%AC%AC%E5%9B%9B%E3%80%81%E4%BA%94%E5%A4%A9.md)---------------------------
 ---
 ---
 2019-10-10
