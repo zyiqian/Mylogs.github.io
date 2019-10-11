@@ -76,7 +76,7 @@ def monitor():
     #获取内存的使用量
     Men = subprocess.getoutput('free -m')
     Men = Men.replace(',','').split()
-    #获取内存总大小
+    #获取内存总大小，这里需要转成int型的 因为后面要做运算
     mtotal = int(Men[7])
     #获取内存当前使用量
     mused = int(Men[8])
@@ -87,7 +87,7 @@ def monitor():
     #CPU的使用负载
     data = subprocess.getoutput('uptime')
     data = data.replace(',','').split()
-    #cpu一分钟负载情况
+    #cpu一分钟负载情况，这里转成float型为了后面做运算
     cpu = float(data[-3])
     #print(cpu)
     #cpu五分钟负载情况
