@@ -19,9 +19,11 @@
 ---
 2019-10-12
 
-今天尝试了真正的项目部署，主要是用了LAMP架构部署上线。使用了阿里云的云服务器。项目部署流程及文档在[My_Log]()里
+今天尝试了真正的项目部署，主要是用了LAMP架构部署上线。使用了阿里云的云服务器。项目部署流程及文档在[My_Log](https://github.com/Shmil-You/Mylogs.github.io/blob/master/%E9%83%A8%E7%BD%B2LAMP%E6%9E%B6%E6%9E%84%E5%B9%B6%E4%B8%8A%E7%BA%BF%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8ELAMP%E6%9E%B6%E6%9E%84%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF.md)里
 
------------------------------[3、Python 第四、五天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/3%E3%80%81Python%20%E7%AC%AC%E5%9B%9B%E3%80%81%E4%BA%94%E5%A4%A9.md)---------------------------
+主要就是PHP环境部署有点麻烦，要安装一大堆的依赖包，不过所需的依赖包我都全部放一起了，直接yum安装就可以用了
+
+-----------------------------[基于云服务器部署LAMP架构购物商城项目上线](https://github.com/Shmil-You/Mylogs.github.io/blob/master/%E9%83%A8%E7%BD%B2LAMP%E6%9E%B6%E6%9E%84%E5%B9%B6%E4%B8%8A%E7%BA%BF%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8ELAMP%E6%9E%B6%E6%9E%84%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF.md)---------------------------
 ---
 ---
 2019-10-11
