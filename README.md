@@ -17,6 +17,15 @@
 
 ----------------------------------------------------------------------------------
 ---
+2019-10-14
+
+今天是学习Python的第六天，主要学习了Python的面向对象编程，面向对象Object Oriented Programming 简称 OOP
+
+所谓Python皆对象，数字、字符串、元组、列表、字典、函数、方法、类、模块等等都是对象，包括你的代码。
+
+--------------------------------[4、Python 第六天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/4%E3%80%81Python%20%E7%AC%AC%E5%85%AD%E5%A4%A9.md)---------------------------
+---
+---
 2019-10-12
 
 今天尝试了真正的项目部署，主要是用了LAMP架构部署上线。使用了阿里云的云服务器。项目部署流程及文档在[My_Log](https://github.com/Shmil-You/Mylogs.github.io/blob/master/%E9%83%A8%E7%BD%B2LAMP%E6%9E%B6%E6%9E%84%E5%B9%B6%E4%B8%8A%E7%BA%BF%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/%E5%9F%BA%E4%BA%8ELAMP%E6%9E%B6%E6%9E%84%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF.md)里
