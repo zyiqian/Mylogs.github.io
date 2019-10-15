@@ -174,7 +174,7 @@ vim connect.php  //修改登录数据库的用户名和密码
 mysql -uroot -p1
 mysql> create database onlineshop;  //现在创建一个库
 mysql> use onlineshop   //使用库
-mysql>  source /usr/local/apache/htdocs/dist/onlineshop.sql  //导入数据
+mysql>  source /usr/local/apache/htdocs/dist/db/onlineshop.sql  //导入数据
 mysql> flush privileges; //刷新下
 
 重启apache
