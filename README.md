@@ -26,7 +26,7 @@
 今晚上我用了自习课的时间对psutil模块的里面常用函数进行了练习，CPU的信息，内存的信息，磁盘的信息
 等。打印输出到终端上，并调用前两天打包的企业微信包将其打印的信息发送到企业微信中去。
 
---------------------------------[5、Python 第七天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/4%E3%80%81Python%20%E7%AC%AC%E5%85%AD%E5%A4%A9.md)---------------------------
+--------------------------------[5、Python 第七天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/5%E3%80%81Python%20%E7%AC%AC%E4%B8%83%E5%A4%A9.md)---------------------------
 ---
 ---
 ---
