@@ -19,7 +19,13 @@
 ---
 2019-10-16
 
+今天主要也是学习Python的几个模块：shutil（压缩打包模块）、subprocess（执行本机系统命令）、yagmail（邮件模块）、paramiko（基于ssh连接）、re（ 正则模块）
 
+主要难点就是在于re正则模块，里面的表达式符号使用方法太多了。要用到熟练得要后期对其挤时间学习。
+
+对于其他模块还是挺容易上手的。
+
+--------------------------------[5、Python 第七天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/6%E3%80%81Python%20%E7%AC%AC%E5%85%AB%E5%A4%A9.md)---------------------------
 ---
 ---
 2019-10-15
