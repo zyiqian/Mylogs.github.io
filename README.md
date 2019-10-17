@@ -17,6 +17,13 @@
 
 ----------------------------------------------------------------------------------
 ---
+2019-10-17
+
+今天学习了python连接数据库，回顾了MySQL的增删改查等内容，还简单介绍了网页图片的爬取。
+
+--------------------------------[5、Python 连接MySQL、注入.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/sql%E6%B3%A8%E5%85%A5--sql%E8%AF%AD%E5%8F%A5%E5%9B%9E%E9%A1%BE.md)---------------------------
+---
+---
 2019-10-16
 
 今天主要也是学习Python的几个模块：shutil（压缩打包模块）、subprocess（执行本机系统命令）、yagmail（邮件模块）、paramiko（基于ssh连接）、re（ 正则模块）
