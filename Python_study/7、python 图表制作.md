@@ -4,7 +4,12 @@
 - pyecharts python中的echart接口模块
 
 ```python
-pip3  install pyecharts==0.1.9.4
+先找到Python解释器的目录 F:\Python37\Scripts
+cmd 
+F:
+cd F:\Python37\Scripts
+pip.exe 
+pip install pyecharts==0.1.9.4
 ```
 
 全球国家地图: [echarts-countries-pypkg](https://github.com/pyecharts/echarts-countries-pypkg) (1.9MB): 世界地图和 213 个国家，包括中国地图
@@ -19,6 +24,9 @@ bar.add("服装", ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "�
 bar.show_config()
 bar.render()
 # 普通折线图
+attr = ['test','abc']
+v1 = [1,2,3]
+v2 = [4,5,6]
 line = Line('折线图')
 line.add('商家A', attr, v1, mark_point=['max'])
 line.add('商家B', attr, v2, mark_point=['min'], is_smooth=True)
