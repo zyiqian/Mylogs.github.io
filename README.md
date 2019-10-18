@@ -21,14 +21,14 @@
 
 今天的学习内容有：Python操作Redis、异常处理、一些图表制作、还有Python的多进程多线程以及一些日志信息处理等内容；
 
---------------------------------[5、Python 连接MySQL、注入.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/sql%E6%B3%A8%E5%85%A5--sql%E8%AF%AD%E5%8F%A5%E5%9B%9E%E9%A1%BE.md)------------------------
+--------------------------------[Python_课程今天告一段落](https://github.com/Shmil-You/Mylogs.github.io/tree/master/Python_study)------------------------
 ---
 ---
 2019-10-17
 
 今天学习了python连接数据库，回顾了MySQL的增删改查等内容，还简单介绍了网页图片的爬取。
 
---------------------------------[5、Python 连接MySQL、注入.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/sql%E6%B3%A8%E5%85%A5--sql%E8%AF%AD%E5%8F%A5%E5%9B%9E%E9%A1%BE.md)---------------------------
+--------------------------------[Python 连接MySQL、注入](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/sql%E6%B3%A8%E5%85%A5--sql%E8%AF%AD%E5%8F%A5%E5%9B%9E%E9%A1%BE.md)---------------------------
 ---
 ---
 2019-10-16
@@ -39,7 +39,7 @@
 
 对于其他模块还是挺容易上手的。
 
---------------------------------[5、Python 第七天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/6%E3%80%81Python%20%E7%AC%AC%E5%85%AB%E5%A4%A9.md)---------------------------
+--------------------------------[Python 第七天](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/6%E3%80%81Python%20%E7%AC%AC%E5%85%AB%E5%A4%A9.md)---------------------------
 ---
 ---
 2019-10-15
@@ -51,7 +51,7 @@
 今晚上我用了自习课的时间对psutil模块的里面常用函数进行了练习，CPU的信息，内存的信息，磁盘的信息
 等。打印输出到终端上，并调用前两天打包的企业微信包将其打印的信息发送到企业微信中去。
 
---------------------------------[5、Python 第七天.md](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/5%E3%80%81Python%20%E7%AC%AC%E4%B8%83%E5%A4%A9.md)---------------------------
+--------------------------------[Python 第七天](https://github.com/Shmil-You/Mylogs.github.io/blob/master/Python_study/5%E3%80%81Python%20%E7%AC%AC%E4%B8%83%E5%A4%A9.md)---------------------------
 ---
 ---
 ---
