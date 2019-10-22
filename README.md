@@ -21,7 +21,7 @@
 
 今天主要学习了网络安全之文件包含渗透，和web信息收集之谷歌搜索引擎的使用。
 
---------------------------------[LV扩容](https://github.com/Shmil-You/Mylogs.github.io/blob/master/My_Logs/使用谷歌科学上网.md)----------------------
+--------------------------------[谷歌搜索引擎的使用](https://github.com/Shmil-You/Mylogs.github.io/blob/master/My_Logs/使用谷歌科学上网.md)----------------------
 ---
 ---
 2019-10-20
